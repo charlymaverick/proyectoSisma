@@ -4,7 +4,7 @@
 menu-item-open menu-item-here
 @endsection
 @section('titulo')
-    Home
+    Inicio
 @endsection
 @section('contenido')
 <div class="container">
