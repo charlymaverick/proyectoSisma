@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Role;
 
 class RoleController extends Controller
@@ -83,8 +84,11 @@ class RoleController extends Controller
      * @param  \App\Models\Logs  $logs
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Role $logs)
+    public function destroy($id)
     {
-        //
+        DB::table("roles")->where('id',$id)->delete();
+
+        session()->flash('error', 'failure');
+        return redirect()->route('roles.index');
     }
 }
