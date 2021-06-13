@@ -88,7 +88,7 @@ class RoleController extends Controller
     {
         DB::table("roles")->where('id',$id)->delete();
 
-        session()->flash('error', 'failure');
-        return redirect()->route('roles.index');
+        session()->flash('error', 'delete');
+        return redirect()->route('roles');
     }
 }

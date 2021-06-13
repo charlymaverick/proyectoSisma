@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Logs;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LogsController extends Controller
 {
@@ -15,7 +16,7 @@ class LogsController extends Controller
      */
     public function index()
     {
-        //
+       
     }
 
     /**
@@ -79,8 +80,11 @@ class LogsController extends Controller
      * @param  \App\Models\Logs  $logs
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Logs $logs)
+    public function destroy($id)
     {
-        //
+        DB::table("logs")->where('id',$id)->delete();
+
+        session()->flash('error', 'delete');
+        return redirect()->route('logs');
     }
 }

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Cuestionarios;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class CuestionariosController extends Controller
 {
@@ -15,7 +17,9 @@ class CuestionariosController extends Controller
      */
     public function index()
     {
-        //
+        $datos = Cuestionarios::all();
+
+        return view('admin.cuestionarios.index')->with(['datos'=>$datos]);
     }
 
     /**
@@ -79,8 +83,11 @@ class CuestionariosController extends Controller
      * @param  \App\Models\Cuestionarios  $cuestionarios
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cuestionarios $cuestionarios)
+    public function destroy($id)
     {
-        //
+        DB::table("cuestionarios")->where('id',$id)->delete();
+
+        session()->flash('error', 'delete');
+        return redirect()->route('cuestionarios');
     }
 }

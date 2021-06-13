@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Eventos;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class EventosController extends Controller
 {
@@ -15,7 +16,9 @@ class EventosController extends Controller
      */
     public function index()
     {
-        //
+        $datos = Eventos::all();
+
+        return view('admin.eventos.index')->with(['datos'=>$datos]);
     }
 
     /**
@@ -79,8 +82,12 @@ class EventosController extends Controller
      * @param  \App\Models\Eventos  $eventos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Eventos $eventos)
+    public function destroy($id)
     {
-        //
+        DB::table("eventos")->where('id',$id)->delete();
+
+        session()->flash('error', 'delete');
+        return redirect()->route('eventos');
     }
-}
+    }
+
