@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
 class RoleController extends Controller
@@ -19,7 +20,6 @@ class RoleController extends Controller
     {
        
         $roles = Role::all();
-
         return view('admin.roles.index')->with(['roles'=>$roles]);
     }
 
@@ -30,7 +30,9 @@ class RoleController extends Controller
      */
     public function create()
     {
-        return view('admin.roles.create');
+
+        $permission = Permission::all();
+        return view('admin.roles.create')->with(['permission'=>$permission]);
     }
 
     /**
@@ -41,7 +43,12 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      
+    
+        $role = Role::create(['name' => $request->input('name')]);
+        $role->syncPermissions($request->input('permission'));
+        session()->flash('error', 'success');
+        return redirect()->route('roles');
     }
 
     /**
@@ -88,7 +95,7 @@ class RoleController extends Controller
     {
         DB::table("roles")->where('id',$id)->delete();
 
-        session()->flash('error', 'failure');
+        session()->flash('error', 'success');
         return redirect()->route('roles.index');
     }
 }

@@ -116,8 +116,8 @@ License: You must have a valid license purchased only from themeforest(the above
 						<div id="kt_aside_menu" class="aside-menu my-4" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
 							<!--begin::Menu Nav-->
 							<ul class="menu-nav">
-								<li class="menu-item menu-item-active" aria-haspopup="true">
-									<a href="index.html" class="menu-link">
+								<li class="menu-item @yield('home')" aria-haspopup="true">
+									<a href="{{route('admin.home')}}" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -136,7 +136,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<h4 class="menu-text">Sistema</h4>
 									<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 								</li>
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu @yield('cuestionarios')" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
@@ -153,7 +153,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										
 									</a>
 								</li>
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu @yield('noticias')" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
@@ -171,7 +171,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</a>
 									
 								</li>
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu @yield('eventos')" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Bucket.svg-->
@@ -194,7 +194,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 								</li>
 								
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu @yield('usuarios')" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Code/Compiling.svg-->
@@ -212,7 +212,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</a>
 									
 								</li>
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu @yield('roles')" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="{{route('roles')}}" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/General/Settings-1.svg-->
@@ -235,7 +235,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<h4 class="menu-text">Utilidades</h4>
 									<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 								</li>
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu @yield('calendarios')" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Design/PenAndRuller.svg-->
@@ -253,7 +253,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</a>
 									
 								</li>
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu @yield('reportes')" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-left-panel-2.svg-->
@@ -436,7 +436,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<span class="navi-text text-muted text-hover-primary">Corrreo@correo.com</span>
 								</span>
 							</a>
-							<a href="#" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Cerrar Sesion</a>
+							<a href="{{ route('logout') }}" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Cerrar Sesion</a>
 						</div>
 					</div>
 				</div>

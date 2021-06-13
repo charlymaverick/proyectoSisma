@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('home')
-menu-item-open menu-item-here
+menu-item-active
 @endsection
 @section('titulo')
     Inicio
