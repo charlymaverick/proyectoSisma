@@ -30,6 +30,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/roles', [RoleController::class, 'index'])->name('roles');
     Route::get('/roles/create', [RoleController::class, 'create'])->name('roles.create');
     Route::post('/roles/store', [RoleController::class, 'store'])->name('roles.store');
+    Route::get('/roles/delete/{id}', [RoleController::class, 'destroy'])->name('roles.delete');
+    Route::get('/roles/edit/{id}', [RoleController::class, 'edit'])->name('roles.edit');
+    Route::post('/roles/update', [RoleController::class, 'update'])->name('roles.update');
+
     Route::get('logout', [LoginController::class, 'logout']);
     Route::get('/cuestionarios', [App\Http\Controllers\CuestionariosController::class, 'index'])->name('cuestionarios.index');
 
