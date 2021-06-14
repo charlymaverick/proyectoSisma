@@ -68,9 +68,14 @@ class RoleController extends Controller
      * @param  \App\Models\Logs  $logs
      * @return \Illuminate\Http\Response
      */
-    public function edit(Role $logs)
+    public function edit($id)
     {
-        //
+        $role = Role::find($id);
+        $permission = Permission::all();
+        $rolePermission = DB::table("role_has_permissions")->where("role_has_permissions.role_id",$id)
+        ->pluck('role_has_permissions.permission_id','role_has_permissions.permission_id')
+        ->all();
+        return view('admin.roles.edit')->with(['role'=>$role, 'permission'=>$permission, 'rolePermission'=>$rolePermission]);
     }
 
     /**
@@ -80,9 +85,14 @@ class RoleController extends Controller
      * @param  \App\Models\Logs  $logs
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Role $logs)
+    public function update(Request $request)
     {
-        //
+        $role = Role::find($request->id);
+        $role->name = $request->input('name');
+        $role->save();
+        $role->syncPermissions($request->input('permission'));
+        session()->flash('error', 'edit');
+        return redirect()->route('roles');
     }
 
     /**
@@ -95,7 +105,7 @@ class RoleController extends Controller
     {
         DB::table("roles")->where('id',$id)->delete();
 
-        session()->flash('error', 'success');
-        return redirect()->route('roles.index');
+        session()->flash('error', 'delete');
+        return redirect()->route('roles');
     }
 }

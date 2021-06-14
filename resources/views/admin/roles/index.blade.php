@@ -4,8 +4,7 @@
 @endsection
 @section('roles')
 menu-item-active
-
-@show
+@endsection
 @section('contenidos')
 @if (Session::has('error'))
         @if (Session::get('error') == 'success')
@@ -19,9 +18,16 @@ menu-item-active
             </div>
         </div>
         @endif
-        @if (Session::get('error') == 'failure')
-            <div class="alert alert-danger"><strong>ERROR!</strong> Se ha producido un error, favor vuelva a intentarlo.
-                Si el error persiste favor comunicarse al administrador.</div>
+        @if (Session::get('error') == 'delete')
+        <div class="alert alert-custom alert-notice alert-light-danger fade show" role="alert">
+            <div class="alert-icon"><i class="flaticon-warning"></i></div>
+            <div class="alert-text">Rol eliminado correctamente!</div>
+            <div class="alert-close">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="ki ki-close"></i></span>
+                </button>
+            </div>
+        </div>
         @endif
     @endif  
 <div class="d-flex flex-column-fluid">
@@ -121,7 +127,7 @@ menu-item-active
                                 </td>
                             <td data-field="Actions" data-autohide-disabled="false" aria-label="null" class="datatable-cell"><span style="overflow: visible; position: relative; width: 125px;">
                             						
-                                <a href="javascript:;" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details">	                            
+                                <a href="{{route('roles.edit',$rol->id)}}" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details">	                            
                                     <span class="svg-icon svg-icon-md">	                                
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">	                                    
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">	                                        
@@ -132,7 +138,7 @@ menu-item-active
                                         </svg>	                            
                                     </span>							
                                 </a>							
-                                <a href="javascript:;" class="btn btn-sm btn-clean btn-icon" title="Delete">	                            
+                                <a href="{{route('roles.delete',$rol->id)}}" class="btn btn-sm btn-clean btn-icon" title="Delete">	                            
                                     <span class="svg-icon svg-icon-md">	                                
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">	                                    
                                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">	                                        <rect x="0" y="0" width="24" height="24"></rect>	                                        
