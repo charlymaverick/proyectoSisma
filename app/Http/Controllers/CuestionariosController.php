@@ -20,6 +20,7 @@ class CuestionariosController extends Controller
         $datos = Cuestionarios::all();
 
         return view('admin.cuestionarios.index')->with(['datos'=>$datos]);
+        
     }
 
     /**

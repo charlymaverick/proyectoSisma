@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/cuestionarios', [App\Http\Controllers\HomeController::class, 'index'])->name('cuestionarios.store');
 
 Auth::routes();
 
@@ -30,5 +31,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/roles/create', [RoleController::class, 'create'])->name('roles.create');
     Route::post('/roles/store', [RoleController::class, 'store'])->name('roles.store');
     Route::get('logout', [LoginController::class, 'logout']);
+    Route::get('/cuestionarios', [App\Http\Controllers\CuestionariosController::class, 'index'])->name('cuestionarios.index');
+
+
 
 });
