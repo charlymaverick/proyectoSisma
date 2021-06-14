@@ -2,7 +2,28 @@
 @section('titulo')
     Roles
 @endsection
+@section('roles')
+menu-item-active
+
+@show
 @section('contenidos')
+@if (Session::has('error'))
+        @if (Session::get('error') == 'success')
+        <div class="alert alert-custom alert-notice alert-light-primary fade show" role="alert">
+            <div class="alert-icon"><i class="flaticon-warning"></i></div>
+            <div class="alert-text">Rol creado correctamente</div>
+            <div class="alert-close">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="ki ki-close"></i></span>
+                </button>
+            </div>
+        </div>
+        @endif
+        @if (Session::get('error') == 'failure')
+            <div class="alert alert-danger"><strong>ERROR!</strong> Se ha producido un error, favor vuelva a intentarlo.
+                Si el error persiste favor comunicarse al administrador.</div>
+        @endif
+    @endif  
 <div class="d-flex flex-column-fluid">
     <!--begin::Container-->
     <div class="container">
@@ -38,7 +59,7 @@
                    
                     <!--end::Dropdown-->
                     <!--begin::Button-->
-                    <a href="#" class="btn btn-primary font-weight-bolder">
+                    <a href="{{route('roles.create')}}" class="btn btn-primary font-weight-bolder">
                     <span class="svg-icon svg-icon-md">
                         <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -90,8 +111,9 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($roles as $value => $rol)
                         <tr>
-                            @foreach ($roles as $value => $rol)
+                            
                                 
                             <td>#{{$value+1}}</td>
                             <td>
@@ -122,8 +144,9 @@
                                 </a>						
 
                             </td>
-                            @endforeach
+                          
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
                 <!--end: Datatable-->

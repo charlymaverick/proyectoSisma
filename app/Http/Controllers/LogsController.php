@@ -26,7 +26,6 @@ class LogsController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**

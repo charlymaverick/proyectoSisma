@@ -28,8 +28,9 @@ class NoticiasController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.noticias.create'); 
     }
+    
 
     /**
      * Store a newly created resource in storage.

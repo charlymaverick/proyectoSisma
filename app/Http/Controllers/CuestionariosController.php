@@ -29,7 +29,7 @@ class CuestionariosController extends Controller
      */
     public function create()
     {
-        //
+     return view('admin.calendario.create'); 
     }
 
     /**
