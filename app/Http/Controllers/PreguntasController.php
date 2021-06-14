@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Preguntas;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PreguntasController extends Controller
 {
@@ -15,7 +16,9 @@ class PreguntasController extends Controller
      */
     public function index()
     {
-        //
+        $datos = Preguntas::all();
+
+        return view('cuestionarios.index')->with(['datos'=>$datos]);
     }
 
     /**
@@ -79,8 +82,11 @@ class PreguntasController extends Controller
      * @param  \App\Models\Preguntas  $preguntas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Preguntas $preguntas)
+    public function destroy($id)
     {
-        //
+        DB::table("preguntas")->where('id',$id)->delete();
+
+        session()->flash('error', 'delete');
+        return redirect()->route('preguntas');
     }
 }

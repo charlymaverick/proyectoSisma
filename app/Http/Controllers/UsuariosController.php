@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Usuarios;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UsuariosController extends Controller
 {
@@ -15,7 +16,9 @@ class UsuariosController extends Controller
      */
     public function index()
     {
-        //
+        $datos = Usuarios::all();
+
+        return view('admin.usuarios.index')->with(['datos'=>$datos]);
     }
 
     /**
@@ -79,8 +82,11 @@ class UsuariosController extends Controller
      * @param  \App\Models\Usuarios  $usuarios
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Usuarios $usuarios)
+    public function destroy($id)
     {
-        //
+        DB::table("usuarios")->where('id',$id)->delete();
+
+        session()->flash('error', 'delete');
+        return redirect()->route('usurios');
     }
 }

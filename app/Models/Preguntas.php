@@ -10,7 +10,7 @@ class Preguntas extends Model
     use HasFactory;
 
     //relacion unos a muchos (inversa)
-public function cuetionario(){
+public function cuestionario(){
 
     return $this->belongsTo('App\Models\Cuestionario');
 

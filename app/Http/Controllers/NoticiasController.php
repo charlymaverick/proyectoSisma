@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Noticias;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class NoticiasController extends Controller
 {
@@ -15,7 +16,9 @@ class NoticiasController extends Controller
      */
     public function index()
     {
-        //
+        $datos = Noticias::all();
+
+        return view('admin.noticias.index')->with(['datos'=>$datos]);
     }
 
     /**
@@ -25,8 +28,9 @@ class NoticiasController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.noticias.create'); 
     }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -79,8 +83,11 @@ class NoticiasController extends Controller
      * @param  \App\Models\Noticias  $noticias
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Noticias $noticias)
+    public function destroy($id)
     {
-        //
+        DB::table("noticias")->where('id',$id)->delete();
+
+        session()->flash('error', 'delete');
+        return redirect()->route('noticias');
     }
 }
