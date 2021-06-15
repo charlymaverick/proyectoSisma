@@ -35,8 +35,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/roles/update', [RoleController::class, 'update'])->name('roles.update');
 
     Route::get('logout', [LoginController::class, 'logout']);
-    Route::get('/cuestionarios', [App\Http\Controllers\CuestionariosController::class, 'index'])->name('cuestionarios.index');
-
+    Route::get('/cuestionarios', [App\Http\Controllers\CuestionariosController::class, 'index'])->name('cuestionarios');
+    Route::get('/calendario', [App\Http\Controllers\HomeController::class, 'indexcalendario'])->name('calendarios');
+    Route::get('/noticias', [App\Http\Controllers\NoticiasController::class, 'index'])->name('noticias');
+    Route::get('/eventos', [App\Http\Controllers\EventosController::class, 'index'])->name('eventos');
+    Route::get('/reportes', [App\Http\Controllers\HomeController::class, 'reportes'])->name('reportes');
+    Route::get('/usuarios', [App\Http\Controllers\UsuariosController::class, 'index'])->name('usuarios');
 
 
 });

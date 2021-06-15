@@ -30,4 +30,10 @@ class HomeController extends Controller
         return view('admin.home');
     }
     
+
+    public function indexcalendario(){
+        return view('admin.calendario.index');
+
+    }
 }
+

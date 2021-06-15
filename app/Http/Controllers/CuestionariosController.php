@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
+
 class CuestionariosController extends Controller
 {
     /**
@@ -30,6 +31,7 @@ class CuestionariosController extends Controller
      */
     public function create()
     {
+  
      return view('admin.calendario.create'); 
     }
 
