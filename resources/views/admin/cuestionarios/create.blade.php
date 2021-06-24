@@ -25,7 +25,7 @@ menu-item-active
             @csrf
             <div class="form-group">
                 <label>Titulo de Cuestionario: </label>
-                <input type="text" class="form-control form-control-solid" placeholder="Nombre Cuestionario" name="name"/>
+                <input type="text" class="form-control form-control-solid" placeholder="Nombre Cuestionario" name="titulo"/>
             </div>
             <div class="form-group">
                 <label for="exampleSelect1">Tipo Usuario <span class="text-danger">*</span></label>

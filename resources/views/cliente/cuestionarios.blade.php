@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('home')
+@section('otro')
 menu-item-open menu-item-here
 @endsection
 @section('titulo')
@@ -23,9 +23,9 @@ menu-item-open menu-item-here
                     <!--begin::Item-->
 
                     @foreach ($datos as $dato)
-                    <div class="d-flex align-items-center mb-9 bg-light rounded p-5" style="background-color: {{$dato->color}};">
+                    <div class="d-flex align-items-center mb-9 bg-light rounded p-5" style="background-color: {{$dato->color}}55 !important;">
                         <!--begin::Icon-->
-                        <span class="svg-icon svg-icon mr-5" style="color: {{$dato->color}};">
+                        <span class="svg-icon svg-icon-success mr-5" style="color: {{$dato->color}};">
                             <span class="svg-icon svg-icon-lg">
                                 <!--begin::Svg Icon | path:assets/media/svg/icons/Home/Library.svg-->
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -42,7 +42,7 @@ menu-item-open menu-item-here
                         <!--begin::Title-->
                         <div class="d-flex flex-column flex-grow-1 mr-2">
                             <a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">{{$dato->titulo}}</a>
-                            <span class="text-muted font-weight-bold">{{$dato->Tipo_usuario}}</span>
+                            <span class="text-white font-weight-bold">{{$dato->Tipo_usuario}}</span>
                         </div>
                         <!--end::Title-->
                         <!--begin::Lable-->

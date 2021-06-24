@@ -50,6 +50,7 @@ class CuestionariosController extends Controller
         $tipo_cuestionario = $request->tipo_cuestionario;
         //$active = $request->active;
         $color = $request->color;
+        $titulo = $request->titulo;
 
         $respuesta_correcta = $request->correcta;
         $respuesta_incorrecta1 = $request->incorrecta1;
@@ -63,6 +64,7 @@ class CuestionariosController extends Controller
         
 
         $cuestionario = Cuestionarios::create([
+            'titulo'=>$titulo,
             'Tipo_usuario'=>$tipo_usuario,
             'Fecha_inicio'=>$fecha_inicio,
             'Fecha_final'=>$fecha_fin,

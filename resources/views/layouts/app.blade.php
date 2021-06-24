@@ -15,7 +15,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--begin::Head-->
 	<head><base href="">
 		<meta charset="utf-8" />
-		<title>Metronic Live preview | Keenthemes</title>
+		<title>Sisma</title>
 		<meta name="description" content="Updates and statistics" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
@@ -36,7 +36,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
-	<body id="kt_body" style="background-image: url(assets/media/bg/bg-10.jpg)" class="quick-panel-right demo-panel-right offcanvas-right header-fixed subheader-enabled page-loading">
+	<body id="kt_body" style="background-image: url({{asset('assets/media/bg/bg-10.jpg')}})" class="quick-panel-right demo-panel-right offcanvas-right header-fixed subheader-enabled page-loading">
 		<!--begin::Main-->
 		<!--begin::Header Mobile-->
 		<div id="kt_header_mobile" class="header-mobile">
@@ -92,34 +92,21 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div id="kt_header_menu" class="header-menu header-menu-left header-menu-mobile header-menu-layout-default">
 										<!--begin::Header Nav-->
 										<ul class="menu-nav">
-											<li class="menu-item menu-item-submenu menu-item-rel @yield('home')" data-menu-toggle="click" aria-haspopup="true">
-												<a href="javascript:;" class="menu-link menu-toggle">
+											<li class="menu-item menu-item-submenu menu-item-rel @yield('home')" >
+												<a href="{{route('home')}}" class="menu-link">
 													<span class="menu-text">Home</span>
 													<i class="menu-arrow"></i>
 												</a>
 												
 											</li>
-                                            <li class="menu-item menu-item-submenu menu-item-rel @yield('otro')" data-menu-toggle="click" aria-haspopup="true">
-												<a href="javascript:;" class="menu-link menu-toggle">
-													<span class="menu-text">Home</span>
+                                            <li class="menu-item menu-item-submenu menu-item-rel @yield('otro')" >
+												<a href="{{route('cuestionarios.user')}}" class="menu-link">
+													<span class="menu-text">Cuestionarios</span>
 													<i class="menu-arrow"></i>
 												</a>
 												
 											</li>
-                                            <li class="menu-item menu-item-submenu menu-item-rel @yield('otro2')" data-menu-toggle="click" aria-haspopup="true">
-												<a href="javascript:;" class="menu-link menu-toggle">
-													<span class="menu-text">Home</span>
-													<i class="menu-arrow"></i>
-												</a>
-												
-											</li>
-                                            <li class="menu-item menu-item-submenu menu-item-rel @yield('otro3')" data-menu-toggle="click" aria-haspopup="true">
-												<a href="javascript:;" class="menu-link menu-toggle">
-													<span class="menu-text">Home</span>
-													<i class="menu-arrow"></i>
-												</a>
-												
-                                            </li>
+                                            
 										</ul>
 										<!--end::Header Nav-->
 									</div>
@@ -335,7 +322,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!--begin::Header-->
 				<div class="d-flex align-items-center mt-5">
 					<div class="symbol symbol-100 mr-5">
-						<div class="symbol-label" style="background-image:url('assets/media/users/300_21.jpg')"></div>
+						<div class="symbol-label" style="background-image:url({{asset('assets/media/users/300_21.jpg')}})"></div>
 						<i class="symbol-badge bg-success"></i>
 					</div>
 					<div class="d-flex flex-column">
@@ -1687,9 +1674,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				</div>
 				<!--end::Wrapper-->
 				<!--begin::Purchase-->
-				<div class="offcanvas-footer">
-					<a href="https://1.envato.market/EA4JP" target="_blank" class="btn btn-block btn-danger btn-shadow font-weight-bolder text-uppercase">Buy Metronic Now!</a>
-				</div>
+				
 				<!--end::Purchase-->
 			</div>
 			<!--end::Content-->
