@@ -37,6 +37,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="{{ asset('assets2/css/themes/layout/brand/dark.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('assets2/css/themes/layout/aside/dark.css') }}" rel="stylesheet" type="text/css" />
 		<!--end::Layout Themes-->
+		@yield('css')
 		<link rel="shortcut icon" href="{{ asset('assets2/media/logos/favicon.ico') }}" />
 	</head>
 	<!--end::Head-->
@@ -137,7 +138,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 								</li>
 								<li class="menu-item menu-item-submenu @yield('cuestionarios')" aria-haspopup="true" data-menu-toggle="hover">
-									<a href="javascript:;" class="menu-link menu-toggle">
+									<a href="{{route('cuestionarios')}}" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-4-blocks.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -1467,7 +1468,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="{{ asset('assets2/js/pages/widgets.js') }}"></script>
 		<script src="{{ asset('assets2/js/pages/crud/ktdatatable/base/html-table.js') }}"></script>
-
+		
+		@yield('js')
 		<!--end::Page Scripts-->
 	</body>
 	<!--end::Body-->

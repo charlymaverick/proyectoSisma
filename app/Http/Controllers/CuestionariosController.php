@@ -29,7 +29,7 @@ class CuestionariosController extends Controller
      */
     public function create()
     {
-     return view('admin.calendario.create'); 
+     return view('admin.cuestionarios.create'); 
     }
 
     /**
@@ -40,7 +40,42 @@ class CuestionariosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cuestionario = 0;
+        $tipo_usuario = $request->tipo_usuario;
+        $fecha_inicio = $request->fecha_inicio;
+        $fecha_fin = $request->fecha_fin;
+        $tipo_cuestionario = $request->tipo_cuestionario;
+        $active = $request->active;
+
+        $respuesta_correcta = $request->correcta;
+        $respuesta_incorrecta1 = $request->incorrecta1;
+        $respuesta_incorrecta2 = $request->incorrecta2;
+        $respuesta_incorrecta3 = $request->incorrecta3;
+        $video = $request->video;
+        $imagen = $request->imagen;
+        $archivo = $request->archivo;
+        $enunciado = $request->enunciado;
+        $activos = $request->activos;
+        
+
+        $cuestionario = Cuestionarios::create([
+            'Tipo_usuario'=>$tipo_usuario,
+            'Fecha_inicio'=>$fecha_inicio,
+            'Fecha_final'=>$fecha_fin,
+            'Tipo_Cuestionario'=>$tipo_cuestionario,
+            'Activo'=>$active
+        ])->id;
+
+        if($cuestionario>0){
+
+            foreach($request->preguntas as $key => $pregunta){
+
+                
+            }
+
+        }
+
+
     }
 
     /**

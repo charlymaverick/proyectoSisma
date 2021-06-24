@@ -5,7 +5,7 @@
 @section('roles')
 menu-item-active
 
-@show
+@endsection
 @section('contenidos')
 
 <div class="card card-custom gutter-b example example-compact">
