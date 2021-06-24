@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cuestionarios;
 use App\Http\Controllers\Controller;
+use App\Models\Preguntas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -47,7 +48,8 @@ class CuestionariosController extends Controller
         $fecha_inicio = $request->fecha_inicio;
         $fecha_fin = $request->fecha_fin;
         $tipo_cuestionario = $request->tipo_cuestionario;
-        $active = $request->active;
+        //$active = $request->active;
+        $color = $request->color;
 
         $respuesta_correcta = $request->correcta;
         $respuesta_incorrecta1 = $request->incorrecta1;
@@ -57,7 +59,7 @@ class CuestionariosController extends Controller
         $imagen = $request->imagen;
         $archivo = $request->archivo;
         $enunciado = $request->enunciado;
-        $activos = $request->activos;
+        
         
 
         $cuestionario = Cuestionarios::create([
@@ -65,16 +67,40 @@ class CuestionariosController extends Controller
             'Fecha_inicio'=>$fecha_inicio,
             'Fecha_final'=>$fecha_fin,
             'Tipo_Cuestionario'=>$tipo_cuestionario,
-            'Activo'=>$active
+            'color'=>$color,
+            'Activo'=>1
         ])->id;
 
         if($cuestionario>0){
 
-            foreach($request->preguntas as $key => $pregunta){
+            foreach($respuesta_correcta as $key => $r){
 
-                
+                $preguntas = Preguntas::create([
+                    'Respuesta_correcta'=>$respuesta_correcta[$key],
+                    'Respuesta_2'=>$respuesta_incorrecta1[$key],
+                    'Respuesta_3'=>$respuesta_incorrecta2[$key],
+                    'Respuesta_4'=>$respuesta_incorrecta3[$key],
+                    'Enunciado_video'=>$video[$key],
+                    'Enunciado'=>$enunciado[$key],
+                    'Imagen'=>$imagen[$key],
+                    'Archivo'=>$archivo[$key],
+                    'Activo'=>1,
+                    'cuestionario_id'=>$cuestionario
+                ]);
             }
 
+            if($preguntas){
+
+                session()->flash('error', 'success');
+                return redirect()->route('cuestionarios');
+            }else{
+                session()->flash('error', 'error');
+                return redirect()->route('cuestionarios');
+            }
+
+        }else{
+            session()->flash('error', 'error');
+                return redirect()->route('cuestionarios');
         }
 
 
