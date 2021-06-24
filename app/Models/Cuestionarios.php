@@ -29,7 +29,7 @@ public function usuario(){
 //relacion unos a muchos
 public function preguntas(){
 
-return $this->hasMany('App\Models\Preguntas');
+return $this->hasMany(Preguntas::class);
 
 }
 }

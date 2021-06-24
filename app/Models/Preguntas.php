@@ -18,14 +18,14 @@ class Preguntas extends Model
         'Archivo',
         'Enunciado',
         'Activo',
-        'cuestionarios_id'
+        'cuestionario_id'
     ];
 
 
     //relacion unos a muchos (inversa)
 public function cuestionario(){
 
-    return $this->belongsTo('App\Models\Cuestionarios');
+    return $this->belongsTo(Cuestionarios::class, 'cuestionario_id');
 
 }
 

@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('home')
 menu-item-open menu-item-here
 @endsection
@@ -47,7 +46,7 @@ menu-item-open menu-item-here
                         </div>
                         <!--end::Title-->
                         <!--begin::Lable-->
-                        <span class="font-weight-bolder py-1 font-size-lg" style="color: {{$dato->color}};">{{count($dato->preguntas)}}</span>
+                        <span class="font-weight-bolder py-1 font-size-lg" style="color: {{$dato->color}};"></span>
                         <!--end::Lable-->
                     </div>
                     @endforeach

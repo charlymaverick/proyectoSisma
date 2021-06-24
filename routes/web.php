@@ -27,7 +27,7 @@ Auth::routes();
 
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'indexAdmin'])->name('admin.home');
     Route::get('/roles', [RoleController::class, 'index'])->name('roles');
     Route::get('/roles/create', [RoleController::class, 'create'])->name('roles.create');
@@ -36,7 +36,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/roles/edit/{id}', [RoleController::class, 'edit'])->name('roles.edit');
     Route::post('/roles/update', [RoleController::class, 'update'])->name('roles.update');
 
-    Route::get('/user/cuestionarios', [HomeController::class, 'cuestionarios'])->name('cuestionarios.user');
+    Route::get('/usuarios/cuestionarios', [HomeController::class, 'cuestionarios'])->name('cuestionarios.user');
     //Creacion de cuestionarios
 
     Route::get('/cuestionarios', [CuestionariosController::class, 'index'])->name('cuestionarios');
