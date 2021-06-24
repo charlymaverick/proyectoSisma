@@ -21,7 +21,6 @@ use Illuminate\Support\Facades\Route;
 });
 */
 
-Route::get('/cuestionarios', [App\Http\Controllers\HomeController::class, 'index'])->name('cuestionarios.store');
 
 Auth::routes();
 
@@ -49,14 +48,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     //Creacion noticioas
 
-    Route::get('logout', [LoginController::class, 'logout']);
-    Route::get('/cuestionarios', [App\Http\Controllers\CuestionariosController::class, 'index'])->name('cuestionarios');
-    Route::get('/cuestionarios/create', [App\Http\Controllers\NoticiasController::class, 'create'])->name('cuestionarios.create');
-    Route::get('/cuestionarios/delete', [App\Http\Controllers\NoticiasController::class, 'delete'])->name('cuestionario.delete');
-    Route::get('/cuestionarios/show', [App\Http\Controllers\NoticiasController::class, 'show'])->name('cuestionarios.show');
-    Route::get('/cuestionarios/store', [App\Http\Controllers\NoticiasController::class, 'store'])->name('cuestionarios.store');
-    Route::get('/cuestionarios/edit', [App\Http\Controllers\NoticiasController::class, 'edit'])->name('cuestionarios.edit');
-    Route::get('/cuestionarios/update', [App\Http\Controllers\NoticiasController::class, 'update'])->name('cuestionarios.update');
+
 
     Route::get('/calendario', [App\Http\Controllers\HomeController::class, 'indexcalendario'])->name('calendarios');
     Route::get('/calendario/create', [App\Http\Controllers\NoticiasController::class, 'create'])->name('cuestionarios.update');
@@ -96,7 +88,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/usuarios/update', [App\Http\Controllers\NoticiasController::class, 'update'])->name('usuarios.update');
 
 
-
+    Route::get('logout', [LoginController::class, 'logout']);
 
 
 
