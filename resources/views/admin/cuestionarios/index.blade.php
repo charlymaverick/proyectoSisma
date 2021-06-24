@@ -1,7 +1,11 @@
 @extends('layouts.admin')
+<<<<<<< HEAD
 @section('titulo')
     Cuestionarios
 @endsection
+=======
+
+>>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
 @section('cuestionarios')
 menu-item-active
 @endsection
@@ -10,7 +14,11 @@ menu-item-active
         @if (Session::get('error') == 'success')
         <div class="alert alert-custom alert-notice alert-light-primary fade show" role="alert">
             <div class="alert-icon"><i class="flaticon-warning"></i></div>
+<<<<<<< HEAD
             <div class="alert-text">Cuestionario creado correctamente</div>
+=======
+            <div class="alert-text">Rol creado correctamente</div>
+>>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
             <div class="alert-close">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true"><i class="ki ki-close"></i></span>
@@ -21,7 +29,11 @@ menu-item-active
         @if (Session::get('error') == 'delete')
         <div class="alert alert-custom alert-notice alert-light-danger fade show" role="alert">
             <div class="alert-icon"><i class="flaticon-warning"></i></div>
+<<<<<<< HEAD
             <div class="alert-text">Cuestionario eliminado correctamente!</div>
+=======
+            <div class="alert-text">Rol eliminado correctamente!</div>
+>>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
             <div class="alert-close">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true"><i class="ki ki-close"></i></span>
@@ -57,7 +69,11 @@ menu-item-active
         <div class="card card-custom">
             <div class="card-header flex-wrap border-0 pt-6 pb-0">
                 <div class="card-title">
+<<<<<<< HEAD
                     <h3 class="card-label">Registro de Roles
+=======
+                    <h3 class="card-label">Registro de Cuestionarios
+>>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
                     <span class="d-block text-muted pt-2 font-size-sm"></span></h3>
                 </div>
                 <div class="card-toolbar">
@@ -99,8 +115,13 @@ menu-item-active
                                 
                             </div>
                         </div>
+<<<<<<< HEAD
                         <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0">
                             <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Search</a>
+=======
+                        <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0 ">
+                            <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Buscar</a>
+>>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
                         </div>
                     </div>
                 </div>
@@ -111,6 +132,7 @@ menu-item-active
                     <thead>
                         <tr>
                             <th title="Field #1">ID</th>
+<<<<<<< HEAD
                             <th title="Field #2">Nombre</th>
                             <th title="Field #3">Acciones</th>
 
@@ -154,6 +176,17 @@ menu-item-active
                         </tr>
                         @endforeach
                     </tbody>
+=======
+                            <th title="Field #2">Usuario</th>
+                            <th title="Field #3">Cuestionario</th>
+                            <th title="Field #4">Fecha Inicio</th>
+                            <th title="Field #5">Fecha Fin</th>
+                            <th title="Field #6">Acciones</th>
+
+                        </tr>
+                    </thead>
+                  
+>>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
                 </table>
                 <!--end: Datatable-->
             </div>

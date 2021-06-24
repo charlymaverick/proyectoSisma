@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
+
 class CuestionariosController extends Controller
 {
     /**
@@ -20,6 +21,7 @@ class CuestionariosController extends Controller
         $datos = Cuestionarios::all();
 
         return view('admin.cuestionarios.index')->with(['datos'=>$datos]);
+        
     }
 
     /**

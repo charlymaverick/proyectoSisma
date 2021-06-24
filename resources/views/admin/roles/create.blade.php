@@ -2,7 +2,7 @@
 @section('titulo')
     Creación de Roles
 @endsection
-@section('roles')
+@section('reportes')
 menu-item-active
 
 @endsection

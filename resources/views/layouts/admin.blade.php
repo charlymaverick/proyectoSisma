@@ -155,7 +155,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									</a>
 								</li>
 								<li class="menu-item menu-item-submenu @yield('noticias')" aria-haspopup="true" data-menu-toggle="hover">
-									<a href="javascript:;" class="menu-link menu-toggle">
+									<a href="{{route('noticias')}}" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Shopping/Barcode-read.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -173,7 +173,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									
 								</li>
 								<li class="menu-item menu-item-submenu @yield('eventos')" aria-haspopup="true" data-menu-toggle="hover">
-									<a href="javascript:;" class="menu-link menu-toggle">
+									<a href="{{route('eventos')}}" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Bucket.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -196,7 +196,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								</li>
 								
 								<li class="menu-item menu-item-submenu @yield('usuarios')" aria-haspopup="true" data-menu-toggle="hover">
-									<a href="javascript:;" class="menu-link menu-toggle">
+									<a href="{{route('usuarios')}}" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Code/Compiling.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -237,7 +237,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
 								</li>
 								<li class="menu-item menu-item-submenu @yield('calendarios')" aria-haspopup="true" data-menu-toggle="hover">
-									<a href="javascript:;" class="menu-link menu-toggle">
+									<a href="{{route('calendarios')}}" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Design/PenAndRuller.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -255,7 +255,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									
 								</li>
 								<li class="menu-item menu-item-submenu @yield('reportes')" aria-haspopup="true" data-menu-toggle="hover">
-									<a href="javascript:;" class="menu-link menu-toggle">
+									<a href="{{route('reportes')}}"class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-left-panel-2.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -1468,8 +1468,16 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="{{ asset('assets2/js/pages/widgets.js') }}"></script>
 		<script src="{{ asset('assets2/js/pages/crud/ktdatatable/base/html-table.js') }}"></script>
+<<<<<<< HEAD
 		
 		@yield('js')
+=======
+		<!--begin::Page Vendors(used by this page)-->
+		<script src="{{ asset('assets2/plugins/custom/fullcalendar/fullcalendar.bundle.js') }}"></script>
+		<!--end::Page Vendors-->
+		<!--begin::Page Scripts(used by this page)-->
+		<script src="{{ asset('assets2/js/pages/features/calendar/basic.js') }}"></script>
+>>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
 		<!--end::Page Scripts-->
 	</body>
 	<!--end::Body-->

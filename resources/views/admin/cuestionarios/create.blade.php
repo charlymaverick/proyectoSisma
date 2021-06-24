@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 @section('titulo')
+<<<<<<< HEAD
     Creación de Cuestionarios
 @endsection
 @section('cuestionarios')
@@ -9,11 +10,23 @@ menu-item-active
 @section('css')
     
 @endsection
+=======
+    Creación de Roles
+@endsection
+@section('roles')
+menu-item-active
+
+@endsection
+>>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
 @section('contenidos')
 
 <div class="card card-custom gutter-b example example-compact">
     <div class="card-header">
+<<<<<<< HEAD
         <h3 class="card-title">Cuestionarios</h3>
+=======
+        <h3 class="card-title">Rol</h3>
+>>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
         <div class="card-toolbar">
             <div class="example-tools justify-content-center">
              
@@ -42,6 +55,7 @@ menu-item-active
     </div>
 </div>
 
+<<<<<<< HEAD
 @endsection
 
 @section('js')
@@ -52,3 +66,6 @@ menu-item-active
 <script src="{{ asset('assets/js/pages/crud/forms/editors/ckeditor-classic.js') }}"></script>
 <!--end::Page Scripts-->
 @endsection
+=======
+@endsection
+>>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
