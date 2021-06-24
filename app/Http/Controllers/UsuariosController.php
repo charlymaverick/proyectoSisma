@@ -28,7 +28,7 @@ class UsuariosController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.usuarios.create'); 
     }
 
     /**
@@ -61,7 +61,7 @@ class UsuariosController extends Controller
      */
     public function edit(Usuarios $usuarios)
     {
-        //
+        return view('admin.usuarios.create'); 
     }
 
     /**

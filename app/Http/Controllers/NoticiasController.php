@@ -62,7 +62,7 @@ class NoticiasController extends Controller
      */
     public function edit(Noticias $noticias)
     {
-        //
+        return view('admin.noticias.edit'); 
     }
 
     /**

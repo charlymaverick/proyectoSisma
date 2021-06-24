@@ -32,7 +32,7 @@ class CuestionariosController extends Controller
     public function create()
     {
   
-     return view('admin.calendario.create'); 
+     return view('admin.cuestinarios.create'); 
     }
 
     /**
@@ -65,7 +65,7 @@ class CuestionariosController extends Controller
      */
     public function edit(Cuestionarios $cuestionarios)
     {
-        //
+        return view('admin.cuestionarios.edit'); 
     }
 
     /**

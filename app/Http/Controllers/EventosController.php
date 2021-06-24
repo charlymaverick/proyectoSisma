@@ -61,7 +61,7 @@ class EventosController extends Controller
      */
     public function edit(Eventos $eventos)
     {
-        //
+        return view('admin.eventos.edit'); 
     }
 
     /**
