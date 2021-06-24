@@ -35,5 +35,10 @@ class HomeController extends Controller
         return view('admin.calendario.index');
 
     }
+    
+    public function reportes(){
+        return view('admin.reportes.index');
+
+    }
 }
 

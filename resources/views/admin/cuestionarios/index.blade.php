@@ -55,7 +55,7 @@ menu-item-active
         <div class="card card-custom">
             <div class="card-header flex-wrap border-0 pt-6 pb-0">
                 <div class="card-title">
-                    <h3 class="card-label">Registro de Custionarios
+                    <h3 class="card-label">Registro de Cuestionarios
                     <span class="d-block text-muted pt-2 font-size-sm"></span></h3>
                 </div>
                 <div class="card-toolbar">
@@ -98,7 +98,7 @@ menu-item-active
                             </div>
                         </div>
                         <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0 ">
-                            <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Search</a>
+                            <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Buscar</a>
                         </div>
                     </div>
                 </div>

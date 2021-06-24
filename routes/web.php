@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
+*/
 
 Route::get('/cuestionarios', [App\Http\Controllers\HomeController::class, 'index'])->name('cuestionarios.store');
 
@@ -25,7 +26,7 @@ Auth::routes();
 
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'indexAdmin'])->name('admin.home');
     Route::get('/roles', [RoleController::class, 'index'])->name('roles');
     Route::get('/roles/create', [RoleController::class, 'create'])->name('roles.create');
@@ -38,9 +39,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/cuestionarios', [App\Http\Controllers\CuestionariosController::class, 'index'])->name('cuestionarios');
     Route::get('/calendario', [App\Http\Controllers\HomeController::class, 'indexcalendario'])->name('calendarios');
     Route::get('/noticias', [App\Http\Controllers\NoticiasController::class, 'index'])->name('noticias');
+    Route::get('/noticias/create', [App\Http\Controllers\NoticiasController::class, 'create'])->name('noticias.create');
+
     Route::get('/eventos', [App\Http\Controllers\EventosController::class, 'index'])->name('eventos');
     Route::get('/reportes', [App\Http\Controllers\HomeController::class, 'reportes'])->name('reportes');
     Route::get('/usuarios', [App\Http\Controllers\UsuariosController::class, 'index'])->name('usuarios');
+
 
 
 });

@@ -74,7 +74,7 @@ menu-item-active
                             </g>
                         </svg>
                         <!--end::Svg Icon-->
-                    </span>Nuevo Registro</a>
+                    </span>Agregar Noticia</a>
                     <!--end::Button-->
                 </div>
             </div>
@@ -98,7 +98,7 @@ menu-item-active
                             </div>
                         </div>
                         <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0 ">
-                            <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Search</a>
+                            <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Buscar</a>
                         </div>
                     </div>
                 </div>
