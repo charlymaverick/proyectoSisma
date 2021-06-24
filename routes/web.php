@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\CuestionariosController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,6 +35,19 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/roles/delete/{id}', [RoleController::class, 'destroy'])->name('roles.delete');
     Route::get('/roles/edit/{id}', [RoleController::class, 'edit'])->name('roles.edit');
     Route::post('/roles/update', [RoleController::class, 'update'])->name('roles.update');
+
+
+    //Creacion de cuestionarios
+
+    Route::get('/cuestionarios', [CuestionariosController::class, 'index'])->name('cuestionarios');
+    Route::get('/cuestionarios/create', [CuestionariosController::class, 'create'])->name('cuestionarios.create');
+    Route::post('/cuestionarios/store', [CuestionariosController::class, 'store'])->name('cuestionarios.store');
+    Route::get('/cuestionarios/delete/{id}', [CuestionariosController::class, 'destroy'])->name('cuestionarios.delete');
+    Route::get('/cuestionarios/edit/{id}', [CuestionariosController::class, 'edit'])->name('cuestionarios.edit');
+    Route::post('/cuestionarios/update', [CuestionariosController::class, 'update'])->name('cuestionarios.update');
+
+
+    //Creacion noticioas
 
     Route::get('logout', [LoginController::class, 'logout']);
     Route::get('/cuestionarios', [App\Http\Controllers\CuestionariosController::class, 'index'])->name('cuestionarios');

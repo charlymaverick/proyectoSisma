@@ -37,6 +37,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="{{ asset('assets2/css/themes/layout/brand/dark.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('assets2/css/themes/layout/aside/dark.css') }}" rel="stylesheet" type="text/css" />
 		<!--end::Layout Themes-->
+		@yield('css')
 		<link rel="shortcut icon" href="{{ asset('assets2/media/logos/favicon.ico') }}" />
 	</head>
 	<!--end::Head-->
@@ -1467,11 +1468,16 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="{{ asset('assets2/js/pages/widgets.js') }}"></script>
 		<script src="{{ asset('assets2/js/pages/crud/ktdatatable/base/html-table.js') }}"></script>
+<<<<<<< HEAD
+		
+		@yield('js')
+=======
 		<!--begin::Page Vendors(used by this page)-->
 		<script src="{{ asset('assets2/plugins/custom/fullcalendar/fullcalendar.bundle.js') }}"></script>
 		<!--end::Page Vendors-->
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="{{ asset('assets2/js/pages/features/calendar/basic.js') }}"></script>
+>>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
 		<!--end::Page Scripts-->
 	</body>
 	<!--end::Body-->

@@ -1,16 +1,32 @@
 @extends('layouts.admin')
 @section('titulo')
+<<<<<<< HEAD
+    Creación de Cuestionarios
+@endsection
+@section('cuestionarios')
+menu-item-active
+
+@endsection
+@section('css')
+    
+@endsection
+=======
     Creación de Roles
 @endsection
 @section('roles')
 menu-item-active
 
 @endsection
+>>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
 @section('contenidos')
 
 <div class="card card-custom gutter-b example example-compact">
     <div class="card-header">
+<<<<<<< HEAD
+        <h3 class="card-title">Cuestionarios</h3>
+=======
         <h3 class="card-title">Rol</h3>
+>>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
         <div class="card-toolbar">
             <div class="example-tools justify-content-center">
              
@@ -24,23 +40,13 @@ menu-item-active
                 <label>Rol: </label>
                 <input type="text" class="form-control form-control-solid" placeholder="Nombre Rol" name="name"/>
             </div>
-            <div class="form-group row">
-                <label class="col-3 col-form-label">Permisos: </label>
+           
+            <textarea name="kt-ckeditor-5" id="kt-ckeditor-5">
                 
-                 <div class="col-9 col-form-label">
-                    <div class="checkbox-list">
-                        @foreach($permission as $value)
+            </textarea>
 
-                        <label class="checkbox">
-                            <input type="checkbox" name="permission[]" value="{{$value->id}}"/>
-                            <span></span>{{ $value->name }}</label>
-                    @endforeach
-                      <!--  <label class="checkbox">
-                        <input type="checkbox" name="Checkboxes4" />
-                        <span></span>Default</label>-->
-                    </div>
-                </div>
-            </div>
+
+
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary mr-2">Crear</button>
                 <a href="{{route('roles')}}" class="btn btn-secondary">Volver</a>
@@ -49,4 +55,17 @@ menu-item-active
     </div>
 </div>
 
+<<<<<<< HEAD
 @endsection
+
+@section('js')
+<!--begin::Page Vendors(used by this page)-->
+<script src="{{ asset('assets/plugins/custom/ckeditor/ckeditor-classic.bundle.js') }}"></script>
+<!--end::Page Vendors-->
+<!--begin::Page Scripts(used by this page)-->
+<script src="{{ asset('assets/js/pages/crud/forms/editors/ckeditor-classic.js') }}"></script>
+<!--end::Page Scripts-->
+@endsection
+=======
+@endsection
+>>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
