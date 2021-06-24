@@ -1,6 +1,5 @@
 @extends('layouts.admin')
 @section('titulo')
-<<<<<<< HEAD
     Creación de Cuestionarios
 @endsection
 @section('cuestionarios')
@@ -10,23 +9,11 @@ menu-item-active
 @section('css')
     
 @endsection
-=======
-    Creación de Roles
-@endsection
-@section('roles')
-menu-item-active
-
-@endsection
->>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
 @section('contenidos')
 
 <div class="card card-custom gutter-b example example-compact">
     <div class="card-header">
-<<<<<<< HEAD
         <h3 class="card-title">Cuestionarios</h3>
-=======
-        <h3 class="card-title">Rol</h3>
->>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
         <div class="card-toolbar">
             <div class="example-tools justify-content-center">
              
@@ -37,13 +24,25 @@ menu-item-active
         <form action="{{route('roles.store')}}" method="post">
             @csrf
             <div class="form-group">
-                <label>Rol: </label>
-                <input type="text" class="form-control form-control-solid" placeholder="Nombre Rol" name="name"/>
+                <label>Titulo de Cuestionario: </label>
+                <input type="text" class="form-control form-control-solid" placeholder="Nombre Cuestionario" name="name"/>
             </div>
            
-            <textarea name="kt-ckeditor-5" id="kt-ckeditor-5">
-                
-            </textarea>
+            <div class="card card-custom">
+                <div class="card-header">
+                    <div class="card-title">
+                        <h3 class="card-title">
+                            Pregunta
+                        </h3>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <textarea name="contenido" id="kt-ckeditor-5">
+                        
+                    </textarea>
+                </div>
+            </div>
+            
 
 
 
@@ -55,7 +54,6 @@ menu-item-active
     </div>
 </div>
 
-<<<<<<< HEAD
 @endsection
 
 @section('js')
@@ -66,6 +64,3 @@ menu-item-active
 <script src="{{ asset('assets/js/pages/crud/forms/editors/ckeditor-classic.js') }}"></script>
 <!--end::Page Scripts-->
 @endsection
-=======
-@endsection
->>>>>>> 356f6420c49e812c71ae329f0ead35a0be6108de
