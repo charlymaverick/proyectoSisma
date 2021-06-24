@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cuestionarios;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -38,6 +39,13 @@ class HomeController extends Controller
     
     public function reportes(){
         return view('admin.reportes.index');
+
+    }
+
+    public function cuestionarios(){
+
+        $datos = Cuestionarios::all();
+        return view('cliente.cuestionarios')->with(['datos'=>$datos]);
 
     }
 }

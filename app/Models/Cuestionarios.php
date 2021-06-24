@@ -9,9 +9,19 @@ class Cuestionarios extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'titulo',
+        'Tipo_usuario',
+        'Fecha_inicio',
+        'Fecha_final',
+        'Tipo_Cuestionario',
+        'color',
+        'Activo'
+    ];
+
     //Relacion muchos a muchos
 public function usuario(){
-    return $this->belongToMany('app\Models\Usuario');
+    return $this->belongToMany('app\Models\Usuarios');
 
 }
 
@@ -19,7 +29,7 @@ public function usuario(){
 //relacion unos a muchos
 public function preguntas(){
 
-return $this->hasMany('App\Models\Preguntas');
+return $this->hasMany(Preguntas::class);
 
 }
 }
