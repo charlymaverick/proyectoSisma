@@ -55,7 +55,7 @@ menu-item-active
         <div class="card card-custom">
             <div class="card-header flex-wrap border-0 pt-6 pb-0">
                 <div class="card-title">
-                    <h3 class="card-label">Registro de Cuestionarios
+                    <h3 class="card-label">Reportes
                     <span class="d-block text-muted pt-2 font-size-sm"></span></h3>
                 </div>
                 <div class="card-toolbar">
@@ -107,13 +107,7 @@ menu-item-active
                 <!--begin: Datatable-->
                 <table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
                     <thead>
-                        <tr>
-                            <th title="Field #1">ID</th>
-                            <th title="Field #2">Usuario</th>
-                            <th title="Field #3">Cuestionario</th>
-                            <th title="Field #4">Fecha Inicio</th>
-                            <th title="Field #5">Fecha Fin</th>
-                            <th title="Field #6">Acciones</th>
+                       
 
                         </tr>
                     </thead>

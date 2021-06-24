@@ -8,7 +8,7 @@ menu-item-active
         @if (Session::get('error') == 'success')
         <div class="alert alert-custom alert-notice alert-light-primary fade show" role="alert">
             <div class="alert-icon"><i class="flaticon-warning"></i></div>
-            <div class="alert-text">Rol creado correctamente</div>
+            <div class="alert-text">Noticia creada correctamente</div>
             <div class="alert-close">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true"><i class="ki ki-close"></i></span>
@@ -19,7 +19,7 @@ menu-item-active
         @if (Session::get('error') == 'delete')
         <div class="alert alert-custom alert-notice alert-light-danger fade show" role="alert">
             <div class="alert-icon"><i class="flaticon-warning"></i></div>
-            <div class="alert-text">Rol eliminado correctamente!</div>
+            <div class="alert-text">Noticia eliminada correctamente!</div>
             <div class="alert-close">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true"><i class="ki ki-close"></i></span>
@@ -55,7 +55,7 @@ menu-item-active
         <div class="card card-custom">
             <div class="card-header flex-wrap border-0 pt-6 pb-0">
                 <div class="card-title">
-                    <h3 class="card-label">Registro de Custionarios
+                    <h3 class="card-label">Registro de Noticias
                     <span class="d-block text-muted pt-2 font-size-sm"></span></h3>
                 </div>
                 <div class="card-toolbar">
