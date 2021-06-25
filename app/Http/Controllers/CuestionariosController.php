@@ -32,12 +32,7 @@ class CuestionariosController extends Controller
      */
     public function create()
     {
-<<<<<<< HEAD
-  
-     return view('admin.cuestinarios.create'); 
-=======
      return view('admin.cuestionarios.create'); 
->>>>>>> 0e960930190be2951993cce58f27b3e18778ecaa
     }
 
     /**
