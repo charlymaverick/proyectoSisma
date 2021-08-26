@@ -24,7 +24,7 @@ class CreatePreguntasTable extends Migration
             $table->string('Archivo');
             $table->string('Enunciado');
             $table->boolean('Activo');
-            $table->foreignId('cuestionarios_id')->constrained('cuestionarios');
+             
             $table->timestamps();
 
            /* $table->foreign('cuestionario_id')->references('id')->on('cuestionarios')->onDelete('');*/

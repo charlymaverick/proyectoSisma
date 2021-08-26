@@ -32,7 +32,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
-		<link rel="shortcut icon" href="{{ asset('assets/media/logos/favicon.ico') }}" />
+		<link rel="shortcut icon" href="{{ asset('assets/media/logos/favi.ico') }}" />
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
@@ -42,22 +42,21 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!--begin::Login-->
 			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
 				<!--begin::Aside-->
-				<div class="login-aside d-flex flex-column flex-row-auto" style="background-color: #F2C98A;">
+				<div class="login-aside d-flex flex-column flex-row-auto" style="background-color: #C42227;">
 					<!--begin::Aside Top-->
-					<div class="d-flex flex-column-auto flex-column pt-lg-40 pt-15">
+					<div class="d-flex flex-column-auto flex-column pt-lg-15 pt-15">
 						<!--begin::Aside header-->
-						<a href="#" class="text-center mb-10">
+						<a href="#" class="text-center mb-0">
 							<img src="{{ asset('assets/media/logos/logo-letter-1.png') }}" class="max-h-70px" alt="" />
 						</a>
 						<!--end::Aside header-->
 						<!--begin::Aside title-->
-						<h3 class="font-weight-bolder text-center font-size-h4 font-size-h1-lg" style="color: #986923;">Discover Amazing Metronic
-						<br />with great build tools</h3>
+						<h3 class="font-weight-bolder text-center font-size-h4 font-size-h1-lg" style="color: #ffffff;">SISMA
 						<!--end::Aside title-->
 					</div>
 					<!--end::Aside Top-->
 					<!--begin::Aside Bottom-->
-					<div class="aside-img d-flex flex-row-fluid bgi-no-repeat bgi-position-y-bottom bgi-position-x-center" style="background-image: url(assets/media/svg/illustrations/login-visual-1.svg)"></div>
+					<div class="aside-img d-flex flex-row-fluid bgi-no-repeat bgi-position-y-bottom bgi-position-x-center" style="background-image: url(assets/media/svg/illustrations/kids.svg);"></div>
 					<!--end::Aside Bottom-->
 				</div>
 				<!--begin::Aside-->
@@ -76,13 +75,9 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--begin::Content footer-->
 					<div class="d-flex justify-content-lg-start justify-content-center align-items-end py-7 py-lg-0">
 						<div class="text-dark-50 font-size-lg font-weight-bolder mr-10">
-							<span class="mr-1">2020©</span>
-							<a href="http://keenthemes.com/metronic" target="_blank" class="text-dark-75 text-hover-primary">Keenthemes</a>
-						</div>
-						<a href="#" class="text-primary font-weight-bolder font-size-lg">Terms</a>
-						<a href="#" class="text-primary ml-5 font-weight-bolder font-size-lg">Plans</a>
-						<a href="#" class="text-primary ml-5 font-weight-bolder font-size-lg">Contact Us</a>
-					</div>
+							<span class="mr-1">2021©</span>
+							<a href="#" target="_blank" class="text-dark-75 text-hover-primary">Sisma</a>
+						
 					<!--end::Content footer-->
 				</div>
 				<!--end::Content-->

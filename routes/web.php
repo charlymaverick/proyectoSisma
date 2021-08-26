@@ -27,7 +27,7 @@ Auth::routes();
 
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/index', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'indexAdmin'])->name('admin.home');
     Route::get('/roles', [RoleController::class, 'index'])->name('roles');
     Route::get('/roles/create', [RoleController::class, 'create'])->name('roles.create');
